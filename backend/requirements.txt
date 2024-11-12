@@ -1,0 +1,5 @@
+Flask
+pdfplumber
+pytesseract
+pandas
+spacy
