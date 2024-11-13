@@ -7,8 +7,12 @@ function Dashboard() {
 
     const handleFileChange = async (e) => {
         const file = e.target.files[0];
-        const result = await uploadReceipt(file);
-        setData(result);
+        try {
+            const result = await uploadReceipt(file);
+            console.log("Upload successful:", result.data);  // Log success response
+        } catch (error) {
+            console.error("Upload error:", error.response?.data || error.message);  // Log error details
+        }
     };
 
     return (

@@ -7,13 +7,17 @@ CORS(app)
 
 @app.route('/upload', methods=['POST'])
 def upload_receipt():
+    # Check if the file part is in the request
     if 'file' not in request.files:
-        return jsonify({'error': 'No file part'}), 400
+        return jsonify({'error': 'No file part in the request'}), 400
 
+    # Get the file from the request
     file = request.files['file']
+    
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
 
+    # Pass the file directly to the extraction function
     data = extract_receipt_data(file)
     return jsonify(data)
 
