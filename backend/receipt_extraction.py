@@ -21,7 +21,7 @@ ocr = PaddleOCR(
     cpu_threads=10,
     rec_batch_num=10,
     drop_score=0.4,
-    show_log=False,
+    show_log=True,
     benchmark=False
 )
 

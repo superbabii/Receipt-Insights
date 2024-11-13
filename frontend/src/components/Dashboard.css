@@ -1,0 +1,45 @@
+/* Styling the main container */
+.Dashboard {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* File input instructions */
+.Dashboard span {
+    display: block;
+    font-size: 1.1rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* File input styling */
+.Dashboard input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.Dashboard label {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Dashboard label:hover {
+    background-color: #45a049;
+}
+
+/* Displaying receipt details below the file input */
+.ReceiptForm {
+    margin-top: 20px;
+}
