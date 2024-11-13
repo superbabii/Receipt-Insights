@@ -39,7 +39,7 @@ Ensure you have the following installed on your machine:
 
 ```bash
 git clone https://github.com/superbabii/Receipt-Insights.git
-cd receipt-spending-insights
+cd Receipt-Insights
 ```
 
 ### Backend Setup
