@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SpendingChart from './SpendingChart';
+import ReceiptForm from './ReceiptForm'; // Import the new form component
 import { uploadReceipt } from '../utils/api';
 
 function Dashboard() {
@@ -9,16 +9,17 @@ function Dashboard() {
         const file = e.target.files[0];
         try {
             const result = await uploadReceipt(file);
-            console.log("Upload successful:", result.data);  // Log success response
+            setData(result);
+            console.log("Upload successful:", result);
         } catch (error) {
-            console.error("Upload error:", error.response?.data || error.message);  // Log error details
+            console.error("Upload error:", error.response?.data || error.message);
         }
     };
 
     return (
         <div>
             <input type="file" onChange={handleFileChange} />
-            {data && <SpendingChart data={data} />}
+            {data && <ReceiptForm data={data} />}
         </div>
     );
 }
